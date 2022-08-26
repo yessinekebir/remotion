@@ -1,7 +1,11 @@
 import React from 'react';
 import {interpolate, useCurrentFrame} from 'remotion';
 
-export const Subtitle: React.FC = () => {
+type SubtitleProps = {
+	text: string
+}
+
+export const Subtitle: React.FC = ({ text }: SubtitleProps) => {
 	const frame = useCurrentFrame();
 	const opacity = interpolate(frame, [30, 50], [0, 1], {
 		extrapolateLeft: 'clamp',
@@ -10,7 +14,7 @@ export const Subtitle: React.FC = () => {
 
 	return (
 		<div className="text-gray-600 text-xl" style={{opacity}}>
-			Edit <code>src/index.tsx</code> and save to reload.
+			{text}
 		</div>
 	);
 };

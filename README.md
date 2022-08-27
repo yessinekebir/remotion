@@ -1,4 +1,4 @@
-# Remotion video with Tailwind
+# How to create mp4 video by using React ?
 
 <p align="center">
   <a href="https://github.com/remotion-dev/logo">
@@ -6,7 +6,7 @@
   </a>
 </p>
 
-Welcome to your Remotion project!
+The answer is Remotion!
 
 ## Commands
 
@@ -22,32 +22,15 @@ npm i
 npm start
 ```
 
-**Render video**
+**Generate mp4 video**
 
 ```console
 npm run build
 ```
 
-**Upgrade Remotion**
-
-```console
-npm run upgrade
-```
 
 ## Docs
 
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
+This is a presentation on how to create an mp4 video with React, made by React & Remotion.
 
-Get started with Tailwind by reading the ["Utility first" page](https://tailwindcss.com/docs/utility-first)
-
-## Help
-
-We provide help [on our Discord server](https://remotion.dev/discord).
-
-## Issues
-
-Found an issue with Remotion? [File an issue here](https://github.com/remotion-dev/remotion/issues/new).
-
-## License
-
-Notice that for some entities a company license is needed. Read [the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+The project was created by Yessine Kebir and it is a case study.

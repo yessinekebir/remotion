@@ -10,10 +10,12 @@ type DynamicVideoProps = {}
 export const DynamicVideo: React.FC = ({}: DynamicVideoProps) => {
     const {fps} = useVideoConfig();
     const frame = useCurrentFrame();
-    const opacity = interpolate(frame, [600, 650], [0, 1], {
+    const opacity = interpolate(frame, [0, 650], [0, 1], {
         extrapolateLeft: 'clamp',
         extrapolateRight: 'clamp',
     });
+
+    // BAD Sample: Do not use <Sequence component inside your component - Use it on Presentation component by wrapping your component: This make useCurrentFrame hook works fine.
     return (
         <>
             <Sequence name={contents.sequence3.name} from={contents.sequence3.startAtSecond * fps}

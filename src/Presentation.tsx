@@ -8,6 +8,7 @@ import contents from "./contents";
 import {DynamicVideo} from "./Sequences/DynamicVideo";
 import {Setup} from "./Sequences/Setup";
 import {MainComponents} from "./Sequences/MainComponents";
+import {Animations} from "./Sequences/Animations";
 
 export const Presentation = () => {
     const {fps} = useVideoConfig();
@@ -33,14 +34,34 @@ export const Presentation = () => {
                     </div>
                 </AbsoluteFill>
             </Sequence>
+
             <DynamicVideo/>
+
             <Sequence name={contents.sequence5.name} from={contents.sequence5.startAtSecond * fps}
                       durationInFrames={contents.sequence5.durationInSeconds * fps}>
                 <Setup />
             </Sequence>
+
             <Sequence name={contents.sequence6.name} from={contents.sequence6.startAtSecond * fps}
                       durationInFrames={contents.sequence6.durationInSeconds * fps}>
                 <MainComponents />
+            </Sequence>
+
+
+
+
+
+            <Sequence name={contents.sequence7.name} from={contents.sequence7.startAtSecond * fps}
+                      durationInFrames={contents.sequence7.durationInSeconds * fps}>
+                <Animations />
+            </Sequence>
+
+            <Sequence name={contents.sequence8.name} from={contents.sequence8.startAtSecond * fps}
+                      durationInFrames={contents.sequence8.durationInSeconds * fps}>
+                <AbsoluteFill className="bg-gray-100 items-center justify-center border-8 border-amber-600 p-8">
+                    <Logo/>
+                    <Title text={contents.sequence8.title} />
+                </AbsoluteFill>
             </Sequence>
         </>
     );

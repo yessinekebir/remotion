@@ -1,6 +1,9 @@
 import CompositionScreen from "./assets/img/CompositionScreen.png"
 import SequenceScreen from "./assets/img/SequenceScreen.png"
 import AbsoluteFillScreen from "./assets/img/AbsoluteFillScreen.png"
+import BlankPage from "./assets/icons/BlankPage.svg"
+import Bracket from "./assets/icons/Bracket.svg"
+import Package from "./assets/icons/Package.svg"
 
 const contents = {
     sequence1: {
@@ -8,7 +11,7 @@ const contents = {
         durationInSeconds: 4,
         startAtSecond: 0,
         title: "Welcome to Remotion",
-        subtitle: "Yessine Kebir - Spindox (Mooney)"
+        subtitle: "Yessine Kebir - Spindox"
     },
     sequence2: {
         name: "What is Remotion",
@@ -64,7 +67,31 @@ const contents = {
         durationInSeconds: 9,
         startAtSecond: 37,
         title: "What about project setup?",
-        description: {}
+        description: {
+            cards: [
+                {
+                    title: "Install",
+                    img: BlankPage,
+                    script: "npx create-video",
+                    list: ["hello-word", "javascript", "blank", "tailwind"],
+                    description: "Choose your template and pass it as option"
+                },
+                {
+                    title: "Dependencies",
+                    img: Package,
+                    script: "brew install",
+                    list: ["ffmpeg"],
+                    description: "FFMPEG A complete, cross-platform solution to record, convert and stream audio and video."
+                },
+                {
+                    title: "Scripts",
+                    img: Bracket,
+                    script: "npm run",
+                    list: ["start", "build"],
+                },
+
+            ]
+        }
     },
     sequence6: {
         name: "Main Components",
@@ -73,11 +100,46 @@ const contents = {
         title: "Main Remotion components",
         description: {
             components: [
-                {name: "Composition", img: CompositionScreen, description: "This is the component to use to register a video to make it renderable and make it show up in the sidebar of the Remotion development interface."},
-                {name: "Sequence", img: SequenceScreen, description: "By using a sequence, you can time-shift the display of your components or parts of your animation in the video."},
-                {name: "Absolute Fill", img: AbsoluteFillScreen, description: "A helper component absolutely positioned to the main frame"}
+                {
+                    name: "Composition",
+                    img: CompositionScreen,
+                    description: "This is the component to use to register a video to make it renderable and make it show up in the sidebar of the Remotion development interface."
+                },
+                {
+                    name: "Sequence",
+                    img: SequenceScreen,
+                    description: "By using a sequence, you can time-shift the display of your components or parts of your animation in the video."
+                },
+                {
+                    name: "Absolute Fill",
+                    img: AbsoluteFillScreen,
+                    description: "A helper component absolutely positioned to the main frame"
+                }
             ]
         }
+    },
+    sequence7: {
+        name: "Animations",
+        durationInSeconds: 10,
+        startAtSecond: 58,
+        title: "Animating properties",
+        description: {
+            value1: {
+                label: "interpolate",
+                text: "~ My opacity value is changing every frame (from 30 to 240) ~",
+            },
+            value2: {
+                label: "interpolateColors",
+                text: "~ My color value is changing from red to yellow (from 30 to 300) ~",
+            }
+        }
+    },
+    sequence8: {
+        name: "Thank you",
+        durationInSeconds: 5,
+        startAtSecond: 68,
+        title: "Thank you for watching!",
+        description: {}
     },
 
 }
